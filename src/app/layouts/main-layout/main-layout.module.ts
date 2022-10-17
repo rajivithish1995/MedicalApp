@@ -11,6 +11,9 @@ import { MainLayoutRoutes } from './main-layout.routing';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    MainLayoutComponent
   ]
 })
 export class MainLayoutModule { }

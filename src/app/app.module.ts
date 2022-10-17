@@ -10,14 +10,12 @@ import { MainLayoutModule } from './layouts/main-layout/main-layout.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthLayoutComponent,
-    MainLayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MainLayoutModule,
-    AuthLayoutModule
+    AuthLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,9 @@ import { AuthLayoutRoutes } from './auth.layout.routing';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    AuthLayoutComponent
   ]
 })
 export class AuthLayoutModule { }
