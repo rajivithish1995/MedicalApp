@@ -1,18 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthLayoutComponent } from './auth-layout.component';
 import { AuthLayoutRoutes } from './auth.layout.routing';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [
-    AuthLayoutComponent
+    LoginComponent,
+    SignupComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(AuthLayoutRoutes),
   ],
   exports:[
-    AuthLayoutComponent
+    LoginComponent,
+    SignupComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ]
 })
 export class AuthLayoutModule { }
