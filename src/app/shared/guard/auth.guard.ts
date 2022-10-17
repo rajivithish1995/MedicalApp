@@ -13,7 +13,7 @@ export class AuthGuard implements CanActivate {
     debugger
     if (!this.auth.isAuthenticated()) {
       window.location.href = `${environment.baseUrl}/login`;
-      //return false;
+      return false;
      } 
      return true;
   }
