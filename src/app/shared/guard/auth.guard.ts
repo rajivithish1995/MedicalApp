@@ -10,7 +10,6 @@ export class AuthGuard implements CanActivate {
   constructor(public auth: AuthService, public router: Router) { }
   
   canActivate(): boolean {
-    debugger
     if (!this.auth.isAuthenticated()) {
       window.location.href = `${environment.baseUrl}/login`;
       return false;
