@@ -1,2 +1,33 @@
-<p>My Header goes here</p>
-<p>Side nav goes here</p>
+<!-- <p>My Header goes here</p>
+<p>Side nav goes here</p> -->
+<div class="form-box">
+    <h1>Reactive form</h1>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="custom-form" autocomplete="off">
+        <div class="custom-form-group">
+            <label for="firstName">First Name</label>
+            <input formControlName="firstName" class="custom-form-control" id="firstName" type="text" name="firstName"
+                autofocus autocomplete="off" inputmode="text" tabindex="1" />
+            <small class="text-danger"
+                *ngIf="(submitted && f['firstName'].errors?.['required'])">
+               First Name is required
+            </small>
+        </div>
+        <div class="custom-form-group">
+            <label for="lastName">Last Name</label>
+            <input formControlName="lastName" class="custom-form-control" id="lastName" type="text" name="lastName"
+                autocomplete="off" inputmode="text" tabindex="2" />
+        </div>
+        <div class="custom-form-group">
+            <label for="email">Email</label>
+            <input formControlName="email" class="custom-form-control" id="email" type="email" name="Email"
+                autocomplete="off" inputmode="email" tabindex="3" />
+        </div>
+        <div class="custom-form-group">
+            <label for="message">Message</label>
+            <textarea formControlName="message" class="custom-form-control" id="message" name="Message"></textarea>
+        </div>
+        <div class="custom-form-group">
+            <button class="btn btn-primary" type="submit" class="btn btn-success">Register</button>
+        </div>
+    </form>
+</div>
